@@ -2,8 +2,8 @@
 class Shape {
 
     var $pi = 3.14159;
-    // function displayAscii(){}
-    // function display(){}
+    function displayAscii(){}
+    function display(){}
 }
 
 
@@ -56,12 +56,8 @@ class Sphere extends Shape {
     function __construct($radius, $char, $colors) {
         $this->color = $colors;
         $this->radius = $radius;
-        $this->volume = pow(
-            (4/3) * $this->pi * $this->radius
-            , 3); 
-        $this->surfaceArea = pow(
-        4 * $this->pi * $this->radius 
-        , 2);
+        $this->volume = (4/3) * $this->pi * pow($this->radius, 3); 
+        $this->surfaceArea = 4 * $this->pi * pow($this->radius, 2);
         $this->char = $char;
     }
 

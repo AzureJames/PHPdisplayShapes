@@ -3,7 +3,7 @@
  isset($_GET) ? extract($_GET) : null;  ?>
 
 <style> form>input, form>label {display: block;}</style>
-
+<h1>PHP Draw Shapes</h1>
 <form action="" method="GET">
     <div class="msg"><?php echo isset($msg) ? $msg : ''; ?></div>
 
@@ -22,10 +22,9 @@
 
 <?php
 if (isset($width) && isset($height) && isset($color) && isset($character)){
-    $color = $_GET['color'];
-    echo $color;
+
     $myCircle = new Sphere($width, $character, $color);
-    echo $color;
+    // echo $color;
     $myShape = new Rectangle($height, $width, $character, $color);
     $myShape->display();
     $myShape->displayAscii();
@@ -33,7 +32,7 @@ if (isset($width) && isset($height) && isset($color) && isset($character)){
 
     $myCircle->display();
     $myCircle->displayAscii();
-    echo "<p>Volume " . $myCircle->volume . '</p>';
-    echo "<p>Surface Area " .$myCircle->surfaceArea . "</p>";
+    echo "<h2>Volume " . $myCircle->volume  . '</h2>'; // 
+    echo "<h2>Surface Area " .$myCircle->surfaceArea . "</h2>";
 }
 ?>
